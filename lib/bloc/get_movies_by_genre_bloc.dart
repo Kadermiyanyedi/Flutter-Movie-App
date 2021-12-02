@@ -12,8 +12,10 @@ class MoviesListByGenreBloc {
     _subject.sink.add(response);
   }
 
-  // Burayı tekrar inceleyelim.
-  void drainStream() {_subject.value == null;}
+  void drainStream() async {
+    await _subject.drain();
+  }
+
   @mustCallSuper
   void dispose() async {
     await _subject.drain();
