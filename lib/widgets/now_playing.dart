@@ -129,6 +129,27 @@ class _NowPlayingState extends State<NowPlaying> {
                        ]
                       ),
                     ),
+                  ),
+                  Positioned(
+                      bottom: 30.0,
+                      child: Container(
+                        padding: const EdgeInsets.only(left: 20.0, right: 10.0),
+                        width: 300.0,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              movies[index].title,
+                              style: const TextStyle(
+                                height: 1.5,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 18.0
+                              ),
+                            )
+                          ],
+                        ),
+                      )
                   )
                 ],
               );
