@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:movie_app/bloc/get_now_playing_bloc.dart';
 import 'package:movie_app/model/movie_response.dart';
 import 'package:movie_app/model/movie.dart';
@@ -128,6 +131,17 @@ class _NowPlayingState extends State<NowPlaying> {
                          0.9
                        ]
                       ),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 0.0,
+                    top: 0.0,
+                    left: 0.0,
+                    right: 0.0,
+                    child: Icon(
+                      FontAwesomeIcons.playCircle,
+                      color: Colors.red,
+                      size: 40.0,
                     ),
                   ),
                   Positioned(
