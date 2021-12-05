@@ -26,14 +26,9 @@ class _NowPlayingState extends State<NowPlaying> {
       stream: nowPlayingMoviesBloc.subject.stream,
       builder:(context, AsyncSnapshot<MovieResponse> snapshot){
         if (snapshot.hasData) {
-          /* != null yerine isNotEmpty kullandım.
-          https://dart-lang.github.io/linter/lints/prefer_is_empty.html
-          Ama bu if-else döngüsünde baya bir hata var.
-          Örneğin aşağıdaki satırda veride hata varsa veri hata fırlatsın demek istemiş.
-          Uyarlamaya çalıştım ancak olmadı.
-          if (snapshot.data!.error.isNotEmpty) {
-            return _buildErrorWidget(snapshot.!data.error);
-          }*/
+          if (snapshot.data?.error != null && snapshot.data!.error.isNotEmpty) {
+            return _buildErrorWidget(snapshot.data!.error);
+          }
           return _buildNowPlayingWidget(snapshot.data as MovieResponse);
         } else if (snapshot.hasError) {
           return _buildErrorWidget(snapshot.error as String);
