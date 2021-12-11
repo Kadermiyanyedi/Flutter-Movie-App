@@ -4,6 +4,7 @@ import 'package:movie_app/model/movie_detail_respone.dart';
 import 'package:movie_app/model/movie_response.dart';
 import 'package:movie_app/model/genre_response.dart';
 import 'package:movie_app/model/person_response.dart';
+import 'package:movie_app/model/video_response.dart';
 
 
 class MovieRepository{
@@ -120,6 +121,20 @@ final Dio _dio = Dio();
     } catch (error, stacktrace) {
       print("Exception occured: $error stackTrace: $stacktrace");
       return MovieResponse.withError("$error");
+    }
+  }
+
+  Future<VideoResponse> getMovieVideos(int id) async {
+    var params = {
+      "api_key": apiKey,
+      "language": "en-Us"
+    };
+    try {
+      Response response = await _dio.get(movieUrl + "/$id" + "/videos", queryParameters: params);
+      return VideoResponse.fromJson(response.data);
+    } catch (error, stacktrace) {
+      print("Exception occured: $error stackTrace: $stacktrace");
+      return VideoResponse.withError("$error");
     }
   }
 }
