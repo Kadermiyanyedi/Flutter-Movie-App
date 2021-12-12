@@ -7,6 +7,7 @@ import 'package:movie_app/model/video.dart';
 import 'package:movie_app/model/video_response.dart';
 import 'package:movie_app/style/theme.dart' as Style;
 import 'package:movie_app/widgets/movie_info.dart';
+import 'package:movie_app/widgets/casts.dart';
 import 'package:sliver_fab/sliver_fab.dart';
 
 class MovieDetailScreen extends StatefulWidget {
@@ -176,7 +177,8 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
                       SizedBox(
                         height: 10.0,
                       ),
-                      MovieInfo(id: movie.id,)
+                      MovieInfo(id: movie.id,),
+                      Casts(id: movie.id,)
                     ]
                   ),),
               )
