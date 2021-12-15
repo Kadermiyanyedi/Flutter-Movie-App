@@ -5,6 +5,7 @@ import 'package:movie_app/model/movie.dart';
 import 'package:movie_app/model/movie_response.dart';
 import 'package:movie_app/style/theme.dart' as Style;
 import 'package:page_indicator/page_indicator.dart';
+import 'package:movie_app/screens/detail_screen.dart';
 
 class NowPlaying extends StatefulWidget {
   @override
@@ -145,10 +146,17 @@ class _NowPlayingState extends State<NowPlaying> {
                       top: 0.0,
                       left: 0.0,
                       right: 0.0,
-                      child: Icon(
-                        FontAwesomeIcons.playCircle,
-                        color: Style.Colors.secondColor,
-                        size: 40.0,
+                      child: RawMaterialButton(
+                        child: Icon(
+                          FontAwesomeIcons.playCircle,
+                          color: Colors.white,
+                          size: 40.0,
+                        ),
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(
+                                builder: (context) => MovieDetailScreen(movie: movies[index])
+                            ));
+                          }
                       ),
                     ),
                     Positioned(

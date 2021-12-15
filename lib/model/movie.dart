@@ -1,5 +1,6 @@
 class Movie {
   final int id;
+  final String key;
   final double popularity;
   final String title;
   final String backPoster;
@@ -9,6 +10,7 @@ class Movie {
 
   Movie(
       this.id,
+      this.key,
       this.popularity,
       this.title,
       this.backPoster,
@@ -19,6 +21,7 @@ class Movie {
 
   Movie.fromJson(Map<String, dynamic> json):
       id = json["id"],
+      key = json["key"],
       popularity = json["popularity"],
       title = json["title"],
       backPoster = json["backdrop_path"],
