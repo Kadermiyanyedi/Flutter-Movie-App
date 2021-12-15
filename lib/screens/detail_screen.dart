@@ -228,7 +228,7 @@ class _MovieDetailScreenState extends State<MovieDetailScreen> {
               builder: (context)=>VideoPlayerScreen(
             controller: YoutubePlayerController(
               initialVideoId: videos[0].key, flags: YoutubePlayerFlags(
-              autoPlay: true, mute: true,)
+              autoPlay: true, mute: false,)
               ,)
             ,)
           ),
