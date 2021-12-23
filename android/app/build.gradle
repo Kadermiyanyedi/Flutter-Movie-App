@@ -1,4 +1,4 @@
-def localProperties =  Properties()
+def localProperties =  new Properties()
 def localPropertiesFile = rootProject.file('local.properties')
 if (localPropertiesFile.exists()) {
     localPropertiesFile.withReader('UTF-8') { reader ->
@@ -8,7 +8,7 @@ if (localPropertiesFile.exists()) {
 
 def flutterRoot = localProperties.getProperty('flutter.sdk')
 if (flutterRoot == null) {
-    throw GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
 }
 
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
@@ -25,11 +25,11 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 
-def keyProperties = Properties()
+def keyProperties = new Properties()
 def keyPropertiesFile = rootProject.file("key.properties")
 
 if(keyPropertiesFile.exists()){
-    keyProperties.load(FileInputStream(keyPropertiesFile))
+    keyProperties.load(new FileInputStream(keyPropertiesFile))
 }
 
 android {
