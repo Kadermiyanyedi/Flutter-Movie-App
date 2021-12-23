@@ -42,6 +42,9 @@ class _KayitEkraniState extends State<KayitEkrani> {
                   validator: (alinanMail){
                     return alinanMail.contains("@")? null : "Mail geçersiz";
                   },
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     labelText: "Email Girin..",
