@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "948966931052",
+    "project_id": "fir-aboneol",
+    "storage_bucket": "fir-aboneol.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948966931052:android:55d1284bae958017a7f649",
+        "android_client_info": {
+          "package_name": "movie.cat.movie_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948966931052-0d98lq5clr69jd64csu01u3nudd3otfm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpQHY0TG2yN9R6CZQYup1JNUTyPNPf_Yc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948966931052-0d98lq5clr69jd64csu01u3nudd3otfm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

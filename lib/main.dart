@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
-
+import 'package:firebase_core/firebase_core.dart';
 import 'screens/home_screen.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      apiKey: "AIzaSyBm0fF3cJAq7RjMb9XltV-CVuUQ2HWvOYY",
+      appId: "1:948966931052:android:55d1284bae958017a7f649",
+      messagingSenderId: "XXX",
+      projectId: "fir-aboneol",
+    ),
+  );
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
