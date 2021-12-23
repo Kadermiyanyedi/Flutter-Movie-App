@@ -1,16 +1,14 @@
-# movie_app
+# Movie App
+Uygulamamız film seçimi konusunda fazla vakit kaybeden kullanıcılarımızın film seçme sürelerini azaltmak için geliştirilmiştir. Filmlerin fragmanları, oyuncuları, açıklamaları ile kullanıcılarımız filmler hakkında bilgi sahibi olabilir ve uygulama içerisinde yer alan kategoriler ile zevklerine uygun film seçebilirler. Film detay sayfasında yer alan benzer filmlerin listesi ile daha önce izledikleri filmlerle benzer konulardaki filmlere kolayca ulaşabilirler. Bu sayede çok daha hızlı bir film seçimi söz konusudur.
 
-A new Flutter project for movie app
+<img src="https://user-images.githubusercontent.com/58422765/147280591-2467123f-454a-42c6-a9f2-df5b62d5fcd8.png" alt="drawing" width="300"/>
 
-## Getting Started
+### Uygulama Mimari Tasarımı
+<img src="https://user-images.githubusercontent.com/58422765/147281099-e296dd73-5be5-4ea0-a84e-cf62a407aa36.png" alt="drawing" width="700"/>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Grup Üyeleri
+* Kader Miyanyedi
+* Özge Çinko
+* Necip Esat Öztürk
+* Şule Akçay
+* Elif Aydın
